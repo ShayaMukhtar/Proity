@@ -11,8 +11,7 @@ body{
     background: linear-gradient(
         135deg,
         blue,
-        lightblue
-    );
+        lightblue);
 }
 
 .container{

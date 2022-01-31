@@ -1,6 +1,7 @@
+var itemArray = []
 document.querySelector('#push').onclick = function(){
     if(document.querySelector('#newTask input').value.length ==0){
-        alert("Please Enter a Task")
+        alert("Please Enter a Task")    
     }
     else{
         document.querySelector('#tasks').innerHTML += `
@@ -13,11 +14,18 @@ document.querySelector('#push').onclick = function(){
             </button>
         </div>
         `;
+        var item = document.querySelector('#newTask input').value;
+ 
+        itemArray.push(item);
+        
+        console.log(itemArray)
     }
     var current_tasks = document.querySelectorAll(".delete");
     for(var i=0; i<current_tasks.length; i++){
         current_tasks[i].onclick = function(){
             this.parentNode.remove();
+            remove()
+            //console.log(itemArray+"hi")
         }
     }
     var tasks = document.querySelectorAll(".task");
@@ -30,6 +38,9 @@ document.querySelector('#push').onclick = function(){
 
 }
 
+function remove(){
+    alert('hi')
+    console.log(itemArray)
+}
 
-
-
+//Loop through the array and then you have to add the onClick attribute to that particular array item and do eveyrthing a
